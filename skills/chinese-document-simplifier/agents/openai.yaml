@@ -1,4 +1,4 @@
 interface:
   display_name: "中文文档精简"
-  short_description: "精简冗长中文文档，删空话与抽象堆叠，保留事实、条件和作者判断"
+  short_description: "精简或审核中文文档，删空话与抽象堆叠，保留事实、条件和作者判断"
   default_prompt: "使用 $chinese-document-simplifier 精简下面的中文文档，保留事实、条件和我的判断，直接给修改后的正文。"

@@ -7,18 +7,20 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills" / "chinese-document-simplifier"
 PATTERNS = {
-    "absolute local user path": re.compile(r"(?:/Users/|/home/)[A-Za-z0-9_.-]+|[A-Z]:\\\\Users\\\\[^\\\\\s]+"),
+    "absolute local user path": re.compile(r"(?:/Users/|/home/)[A-Za-z0-9_.-]+|[A-Z]:\\Users\\[^\\\s]+"),
     "personal email": re.compile(r"[A-Za-z0-9_.+-]+@(?!users[.]noreply[.]github[.]com)[A-Za-z0-9.-]+[.][A-Za-z]{2,}"),
     "GitHub credential": re.compile(r"gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}"),
     "private key": re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     "private workspace link": re.compile(r"https?://[^\s/]+[.](?:feishu[.]cn|larksuite[.]com)/(?:docx|wiki|base)/"),
 }
 REQUIRED = [
-    "README.md", "README.zh-CN.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
-    "CONTRIBUTING.md", "examples.md", "CHANGELOG.md",
+    "README.md", "README.zh-CN.md", "README.en.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
+    "CONTRIBUTING.md", "examples.md", "EVALUATION.md", "CHANGELOG.md",
     "skills/chinese-document-simplifier/SKILL.md",
     "skills/chinese-document-simplifier/LICENSE",
     "skills/chinese-document-simplifier/THIRD_PARTY_NOTICES.md",
+    "skills/chinese-document-simplifier/references/modes-and-files.md",
+    "skills/chinese-document-simplifier/references/examples.md",
 ]
 errors = []
 for rel in REQUIRED:

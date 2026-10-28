@@ -10,6 +10,12 @@
 | [mzopedia Simplified Technical Chinese](https://github.com/mzopedia/simplified-technical-chinese) | 规范与词表中的中文歧义和术语方法 | 选取原则，重新组织，不附完整规范或词表 |
 | [中文技术文档写作风格指南](https://zh-style-guide.readthedocs.io/zh-cn/latest/) | 通用技术写作背景参考 | 仅链接，不附原文 |
 
+## Humanizer 方法参考
+
+[blader/humanizer](https://github.com/blader/humanizer) 的任务模式、文风样本、文件处理和前后对照展示作为本版设计参考。
+本版重新编写中文指令与虚构示例，未附其 26 类规则表或英文案例。
+Humanizer 采用 MIT；下文保留其通知，不将本项目限制应用于其既有内容。
+
 ## Simplified Technical Chinese
 
 规范和词表文本按 CC BY 4.0 提供，脚本和测试按 MIT 提供。
@@ -25,6 +31,30 @@
 MIT License
 
 Copyright (c) 2026 Fenng
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Humanizer 的 MIT 通知
+
+MIT License
+
+Copyright (c) 2025 Siqi Chen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
