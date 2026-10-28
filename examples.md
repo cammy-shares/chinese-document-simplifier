@@ -10,4 +10,7 @@
 - [只审核、不改写](skills/chinese-document-simplifier/references/examples.md#5-审核模式只指出问题)
 - [文件与材料边界](skills/chinese-document-simplifier/references/examples.md#6-文件与材料边界)
 
+- [工作汇报：把抽象进展写成事实](skills/chinese-document-simplifier/references/examples.md#7-工作汇报把抽象进展写成事实)
+- [技术说明：减少翻译腔](skills/chinese-document-simplifier/references/examples.md#8-技术说明减少翻译腔解释概念关系)
+
 验证状态见 [EVALUATION.md](EVALUATION.md)。

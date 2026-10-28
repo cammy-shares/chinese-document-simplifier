@@ -15,7 +15,7 @@ PATTERNS = {
 }
 REQUIRED = [
     "README.md", "README.zh-CN.md", "README.en.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
-    "CONTRIBUTING.md", "examples.md", "EVALUATION.md", "CHANGELOG.md",
+    "CONTRIBUTING.md", "INSTALL.md", "examples.md", "EVALUATION.md", "CHANGELOG.md",
     "skills/chinese-document-simplifier/SKILL.md",
     "skills/chinese-document-simplifier/LICENSE",
     "skills/chinese-document-simplifier/THIRD_PARTY_NOTICES.md",

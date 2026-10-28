@@ -1,13 +1,19 @@
 # 中文文档精简
 
-**删空话，留信息。把绕口的中文改成读者看得懂、用得上的文档。**
+**工作文档去 AI 味，写给人看。**
 
-作者：Cammy Shares · Skill：`chinese-document-simplifier` · 版本：0.2.0
-· [English](README.en.md)
+作者：Cammy Shares · Skill：`chinese-document-simplifier` · 版本：0.3.0
+· [English](README.en.md) · [安装说明](INSTALL.md)
 
-适合已有的说明文、产品文档、方案和评审意见。
-既可以精简正文，也可以只审核不改写。允许个人学习和日常工作使用；
-出售、公开再发布、发布改编版及收费产品集成等限制见 [LICENSE](LICENSE)。
+面向企业办公和技术类中文文档的编辑与审核 Skill。
+把抽象概念、翻译腔和层层嵌套的长句改成清楚、自然的中文；
+减少空话与重复，保留事实、专业术语、条件和作者判断。
+
+重点围绕产品说明、技术解释、方案和评审意见设计，
+也适用于工作汇报、流程说明、操作指引及其他需要把事情说清楚的中文文档。
+PRD 是常见场景之一，不限制使用者的岗位。
+
+允许个人学习和日常工作使用；出售、公开再发布、修改改编及收费集成等限制见 [LICENSE](LICENSE)。
 
 ## 它怎么改
 
@@ -29,33 +35,47 @@
 
 权限前提、时间范围和不可恢复的边界都保留。
 [完整中文示例](examples.md)包括产品说明、评审意见和面向非专业读者的解释，
-每组都有删改理由和不可丢失的信息。
+并补充工作汇报和技术说明；每组都有删改理由和不可丢失的信息。
 
 ## 下载与安装
 
-1. 在 [v0.2.0 Releases](https://github.com/cammy-shares/chinese-document-simplifier/releases/tag/v0.2.0)
-   下载 `chinese-document-simplifier-v0.2.0.zip`。
-2. 解压，将整个同名文件夹放入 `~/.agents/skills/`。
-   项目内使用可放入该项目的 `.agents/skills/`。
-3. 确认目录是 `~/.agents/skills/chinese-document-simplifier/SKILL.md`，
-   中间不要多嵌套一层下载目录。
+**命令行安装到 Codex，供当前用户的各项目使用：**
 
-这是当前 [OpenAI Docs](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
-列出的本地 Skills 目录。旧环境自定义目录以宿主实际设置为准，不视为通用默认位置。
+```bash
+npx --yes skills@1.7.4 add cammy-shares/chinese-document-simplifier --skill chinese-document-simplifier --agent codex --global --copy --yes
+```
 
-**怎样确认安装成功**
+需要 Node.js 22.20.0+、npm / npx 和 Git。`--copy` 复制完整文件夹，不依赖符号链接。
+安装工具固定为已验证的 1.7.4；Skill 从本仓库 main 获取当前版本。
+已有同名 Skill 时先备份目录，`--yes` 会跳过安装确认。
 
-在支持的 Codex 会话中打开技能选择器，搜索“中文文档精简”或
-`chinese-document-simplifier`，再显式选择并调用。
-Codex CLI / IDE 可通过 `/skills` 或输入 `$` 查找。
-若仍不可见，检查目录层级后重启 Codex。
-出现在技能列表只说明被发现，实际效果仍需用自己的文档核对。
+**Windows PowerShell：**
 
-| 环境 | 当前说明 |
+```powershell
+npx.cmd --yes skills@1.7.4 add cammy-shares/chinese-document-simplifier --skill chinese-document-simplifier --agent codex --global --copy --yes
+```
+
+Windows 用户主目录通常位于 C 盘，安装位置为
+`%USERPROFILE%\.agents\skills\chinese-document-simplifier\`。
+macOS / Linux 用户级目录为 `~/.agents/skills/`。
+项目内使用可去掉 `--global`，安装至当前项目的 `.agents/skills/`。
+
+**手动安装：** 下载 [v0.3.0 ZIP](https://github.com/cammy-shares/chinese-document-simplifier/releases/tag/v0.3.0)，
+解压并将整个同名文件夹放入上述目录。最终层级应为
+`skills/chinese-document-simplifier/SKILL.md`，不要只复制入口文件。
+
+完整的 [安装说明](INSTALL.md)包含 C 盘位置、目录检查、更新、移除、Node 排错和第三方工具的遥测设置。
+当前提供命令行与完整文件夹两种方式；无需安装插件。
+
+在 Codex 技能选择器搜索“中文文档精简”或 `chinese-document-simplifier`。
+CLI / IDE 可用 `/skills` 或输入 `$` 查找；未出现时检查目录层级并重启。
+
+| 环境 | 验证情况 |
 | --- | --- |
-| Codex 本地 Skill | 按官方目录规范提供安装步骤，包含 `agents/openai.yaml`；未完成本版本独立安装运行验证 |
-| 其他支持 Agent Skills 的工具 | 可按宿主规范加载同一文件夹，尚未逐一验证 |
-| Word / PDF 文件回写 | 依赖宿主工具，未验证版式保留，不承诺直接覆盖原文件 |
+| Skills CLI → Codex 项目目录 | 在 macOS 隔离目录执行安装，并对照完整文件 |
+| Windows / C 盘 | 提供命令和用户目录说明，尚未在真实 Windows 执行 |
+| Codex 新会话实际调用 | 尚未独立验证；文件安装不等于模型效果证明 |
+| 其他 Agent Skills 宿主、Word / PDF 版式回写 | 尚未逐一验证，依赖对应宿主能力 |
 
 ## 三种使用方式
 
@@ -87,6 +107,13 @@ Codex CLI / IDE 可通过 `/skills` 或输入 `$` 查找。
 
 用户可额外给出读者、篇幅、正式程度或两三段自愿提供的文风样本。
 这些是自然语言请求，不要求工具提供 `rewrite` / `audit` 命令行子命令。
+
+## 常见问题
+
+- **AI 写的中文太长、套话太多怎么办？** 删除重复和空泛表达，保留读者需要的信息；不机械追求更短。
+- **一句话塞进多个概念、像英文翻译怎么办？** 拆出主体、动作、条件和概念关系，按中文阅读顺序重组；不随意替换专业术语。
+- **只适合 PRD 和产品经理吗？** 核心案例来自产品和技术文档，也可用于工作汇报、流程说明及一般办公文档。
+- **能不能只检查，不直接改？** 可以，明确说“只审核，不改写”；文件回写需要明确要求。
 
 ## 适用与边界
 
